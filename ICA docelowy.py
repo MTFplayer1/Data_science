@@ -270,7 +270,6 @@ for z in range(5):
                 )
             else:
                 raise ValueError("Unknown optimization method")
-            # Zapis wyniku
             if best_score < b_score:
                 b_score = best_score
                 b_results[0] = {
@@ -291,7 +290,6 @@ for z in range(5):
         except ValueError as e:
             print(f"Error for Nonlinearity {z}, Method {method}: {e}")
 
-# Wyświetlenie wyników
 print(b_results)
 wykres(icaalg(x,*b_results[0]["best_params"],b_results[0]["nonlinearity"])@x)
 for result in results:
